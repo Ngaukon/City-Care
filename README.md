@@ -2,8 +2,19 @@
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Ngaukon-blue?logo=github)](https://github.com/Ngaukon/City-Care)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Deployed Project](https://img.shields.io/badge/Live-Demo-blue)](https://city-care-five.vercel.app/)
+
 
 **City-Care** is a community-driven platform for reporting city issues like power outages, theft, broken streetlights, accidents, and other public concerns. Residents can post issues, comment, react, and track resolutions.
+
+City-Care supports **SDG 11: Sustainable Cities and Communities** by empowering citizens to report and track urban issues such as broken infrastructure, safety hazards, and public disturbances. The platform fosters community engagement, promotes transparency, and enables faster, data-driven responses to civic problems. By encouraging participatory monitoring and collaboration, City-Care contributes to safer, more resilient, and well-managed cities.
+
+---
+
+
+## Deployed Project
+
+You can access the live project here: [City-Care Live](https://city-care-five.vercel.app/)
 
 ---
 
