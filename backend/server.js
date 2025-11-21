@@ -7,7 +7,7 @@ const postRoutes = require('./routes/posts');
 
 
 const app = express();
-
+app.use(express.json());
 // Environment variable for allowed origin
 const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 
