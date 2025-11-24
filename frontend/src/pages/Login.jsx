@@ -58,7 +58,7 @@ export default function Login() {
               animationDuration="0.75"
               ariaLabel="rotating-lines-loading"
               wrapperStyle={{}}
-              wrapperClass=""
+              wrapperClass="flex items-center justify-center"
             />
           ) : (
             "Login"
