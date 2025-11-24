@@ -2,14 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
 import { toast } from "react-hot-toast";
-
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Register() {
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await API.post("/auth/register", form);
       localStorage.setItem("token", res.data.token);
@@ -46,8 +48,26 @@ export default function Register() {
           className="border p-3 rounded-lg"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
-          Register
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+          disabled={loading} // disabled when loading
+        >
+          {loading ? (
+            <RotatingLines
+              visible={true}
+              height="24"
+              width="24"
+              color="grey"
+              strokeWidth="5"
+              animationDuration="0.75"
+              ariaLabel="rotating-lines-loading"
+              wrapperStyle={{}}
+              wrapperClass="flex items-center justify-center"
+            />
+          ) : (
+            "Register"
+          )}
         </button>
       </form>
     </div>
